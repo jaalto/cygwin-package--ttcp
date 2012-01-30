@@ -1,0 +1,81 @@
+ttcp
+------------------------------------------
+
+Network benchmarking tool
+
+Network throughput testing tool. It can be also used to create a
+network pipe through which you can push any other data you might have.
+
+Runtime requirements:
+  cygwin
+
+Build requirements:
+  cygwin
+
+Canonical homepage:
+  http://www.netcordia.com/resources/tools.asp
+
+Canonical download:
+  See individual files in above link
+
+Version control repository:
+
+Mailing list:
+
+Forum / Wiki:
+
+IRC channel:
+
+Upstream contact:
+  Maintainer:
+  Bugs:
+
+License:
+  Custom
+
+ ttcp.c:
+ * Public Domain.  Distribution Unlimited.
+
+Language:
+  C
+
+------------------------------------
+
+Build instructions:
+  unpack ttcp-20071212-1-src.tar.bz2
+    if you use setup to install this src package, it will be
+    unpacked under /usr/src automatically
+  cd /usr/src
+  ./ttcp*.sh all
+
+This will create:
+  ttcp-20071212-1.tar.bz2
+  ttcp-20071212-1-src.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary distribution:
+
+/usr/bin/ttcp.exe
+/usr/share/doc/Cygwin/ttcp-20071212.README
+/usr/share/man/man1/ttcp.1.gz
+
+------------------
+
+Port Notes:
+- There is no source package. The individual files are listed
+  in upstream page.
+- [Stanislav Sinyagin] For correct work under Cygwin (and perhaps some
+  other systems), this initialization command was added into main():
+
+  sinme.sin_family = AF_INET;
+
+----- version 20071212-1 -----
+- Downloaded all files fresh from upstream.
+- Repackaged everything. Rewrote Makefile, added separate patch.
+
+----- version 19980512-1 -----
+- Initial release Stanislav Sinyagin <ssinyagin@yahoo.com>
+
+Cygwin port maintained by: Jari Aalto <jari.aalto@cante.net>
+Copyright (C) 2007 Jari Aalto; Licenced under GPL v2 or later

@@ -1,0 +1,31 @@
+From ac341fe4e249d0ee40eed88b5396b2c44c6ad0de Mon Sep 17 00:00:00 2001
+From: Jari Aalto <jari.aalto@cante.net>
+Date: Wed, 12 Dec 2007 22:29:45 +0200
+Subject: [PATCH] ttcp.c: Add AF_INET
+
+Signed-off-by: Jari Aalto <jari.aalto@cante.net>
+---
+ ttcp.c |    2 ++
+ 1 files changed, 2 insertions(+), 0 deletions(-)
+
+diff --git a/ttcp.c b/ttcp.c
+index 89e5374..204f121 100644
+--- a/ttcp.c
++++ b/ttcp.c
+@@ -1,4 +1,5 @@
+ /* Modified 12/5/98 for Solaris 5.6 - tcs */
++/* Modified Feb. 2002 for Cygwin compatibility, Stanislav Sinyagin */
+ /*
+  *	T T C P . C
+  *
+@@ -225,6 +226,7 @@ char **argv;
+ 			goto usage;
+ 		}
+ 	}
++	sinme.sin_family = AF_INET;
+ 	if(trans)  {
+ 		/* xmitr */
+ 		if (optind == argc)
+-- 
+1.5.3.GIT
+
