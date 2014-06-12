@@ -2,4 +2,4 @@ sdesc: "Network benchmarking tool"
 ldesc: "Network throughput testing tool. It can be also used to create a
 network pipe through which you can push any other data you might have."
 category: Net
-requires: cygwin
+requires:
