@@ -1,8 +1,10 @@
-diff --git a/ttcp.c b/ttcp.c
-index 89e5374..f677cfb 100644
+---
+ ttcp.c |    2 ++
+ 1 file changed, 2 insertions(+)
+
 --- a/ttcp.c
 +++ b/ttcp.c
-@@ -533,6 +533,7 @@ getrusage(ignored, ru)
+@@ -535,6 +535,7 @@ getrusage(ignored, ru)
      ru->ru_utime.tv_usec = ((buf.tms_utime % HZ) * 1000000) / HZ;
  }
  
@@ -10,7 +12,7 @@ index 89e5374..f677cfb 100644
  /*ARGSUSED*/
  static 
  gettimeofday(tp, zp)
-@@ -542,6 +543,7 @@ gettimeofday(tp, zp)
+@@ -544,6 +545,7 @@ gettimeofday(tp, zp)
      tp->tv_sec = time(0);
      tp->tv_usec = 0;
  }
